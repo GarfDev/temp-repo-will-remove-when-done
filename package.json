@@ -9,6 +9,7 @@
   },
   "private": true,
   "dependencies": {
+    "concurrent": "^0.3.2",
     "tslib": "^2.0.0"
   },
   "devDependencies": {

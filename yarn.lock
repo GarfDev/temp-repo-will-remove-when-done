@@ -1312,6 +1312,11 @@ concat-map@0.0.1:
   resolved "https://registry.yarnpkg.com/concat-map/-/concat-map-0.0.1.tgz#d8a96bd77fd68df7793a73036a3ba0d5405d477b"
   integrity sha1-2Klr13/Wjfd5OnMDajug1UBdR3s=
 
+concurrent@^0.3.2:
+  version "0.3.2"
+  resolved "https://registry.yarnpkg.com/concurrent/-/concurrent-0.3.2.tgz#0eaa0011a15798c56351128f22247f6e2317f50e"
+  integrity sha1-DqoAEaFXmMVjURKPIiR/biMX9Q4=
+
 confusing-browser-globals@^1.0.9:
   version "1.0.11"
   resolved "https://registry.yarnpkg.com/confusing-browser-globals/-/confusing-browser-globals-1.0.11.tgz#ae40e9b57cdd3915408a2805ebd3a5585608dc81"

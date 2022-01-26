@@ -1,3 +1,1 @@
-import { dashboard } from './app/dashboard';
-
-console.log(`Running ${dashboard()}`);
+import('./app/bootstrap');

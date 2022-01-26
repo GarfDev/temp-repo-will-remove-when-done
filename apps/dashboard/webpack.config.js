@@ -5,7 +5,7 @@ const deps = require('./package.json').dependencies;
 module.exports = {
   mode: 'development',
   devServer: {
-    port: 3001,
+    port: 3002,
   },
   module: {
     rules: [
@@ -19,7 +19,11 @@ module.exports = {
         exclude: /node_modules/,
         loader: 'babel-loader',
         options: {
-          presets: ['@babel/preset-env', '@babel/preset-react', '@babel/preset-typescript'],
+          presets: [
+            '@babel/preset-env',
+            '@babel/preset-react',
+            '@babel/preset-typescript',
+          ],
         },
       },
       {
@@ -33,10 +37,10 @@ module.exports = {
   },
   plugins: [
     new ModuleFederationPlugin({
-      name: 'SHELL',
+      name: 'DASHBOARD',
       filename: 'remoteEntry.js',
-      remotes: {
-        DASHBOARD: 'DASHBOARD@http://localhost:3002/remoteEntry.js'
+      exposes: {
+        './App': './src/app/App',
       },
       shared: [
         {
@@ -49,6 +53,7 @@ module.exports = {
         },
       ],
     }),
+
     new HtmlWebpackPlugin({
       template: './src/index.html',
     }),
